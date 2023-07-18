@@ -5,7 +5,10 @@ from time import sleep
 
 TOKEN = ''
 
-bot = commands.Bot(command_prefix = ':p ')
+intents = discord.Intents.default()
+intents.message_content = True
+
+bot = commands.Bot(command_prefix=':p ', intents=intents)
 
 @bot.event
 async def on_ready():
